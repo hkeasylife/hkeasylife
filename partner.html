@@ -66,7 +66,7 @@
         </div>
 
         <div class="notice-box">
-            📌 <strong>夥伴招募須知</strong>：為確保配對質素，請填寫您的常駐區域、健身房權限，並上傳證件防水印及運動狀態照，方便平台為您精準分派高質量訂單！
+            📌 <strong>夥伴招募須知</strong>：為確保配對質素，請填寫您的常駐區域、擅長範疇（如健身、陪伴、跑腿等），並上傳證件防水印及狀態參考照，方便平台為您精準分派高質量訂單！
         </div>
 
         <form id="partnerForm" onsubmit="handlePartnerSubmit(event)">
@@ -86,8 +86,8 @@
             </div>
 
             <div class="form-group">
-                <label>可出入之健身房／會籍權限：</label>
-                <input type="text" id="pGym" placeholder="例如：24/7 Fitness 全線, Anytime Fitness, 康文署等">
+                <label>擅長接單類型（可多選填寫）：</label>
+                <input type="text" id="pSkills" placeholder="例如：健身陪練, 遊戲陪伴, 戶外放狗, 日常跑腿等">
             </div>
 
             <div class="form-group">
@@ -97,9 +97,9 @@
             </div>
 
             <div class="form-group">
-                <label>上載近期健身運動照 / 狀態參考（供配對審核）：</label>
+                <label>上載近期狀態參考照 / 運動照（供配對審核）：</label>
                 <input type="file" id="pPhoto" accept="image/*" required>
-                <small style="color: #666; font-size: 0.8rem;">*讓客仔知道您的訓練水平，提升配對成功率。</small>
+                <small style="color: #666; font-size: 0.8rem;">*讓客仔了解您的風格與水準，提升配對成功率。</small>
             </div>
 
             <button type="submit" class="btn-submit">🚀 提交審核資料並對接 WhatsApp</button>
@@ -112,13 +112,13 @@
             const name = document.getElementById('pName').value;
             const phone = document.getElementById('pPhone').value;
             const area = document.getElementById('pArea').value;
-            const gym = document.getElementById('pGym').value;
+            const skills = document.getElementById('pSkills').value;
 
             const text = `您好！我想申請成為 HK EasyLife 合作夥伴：%0A` +
                          `• 姓名：${name}%0A` +
                          `• 電話：${phone}%0A` +
                          `• 常駐區：${area}%0A` +
-                         `• 健身房權限：${gym}%0A` +
+                         `• 擅長範疇：${skills}%0A` +
                          `*(註：證件及狀態照已準備好，請指示後續交收)*`;
 
             window.open(`https://wa.me/85297821811?text=${text}`, '_blank');
