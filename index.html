@@ -3,196 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HK EasyLife 易生活 - 香港首創生活陪伴與跑腿 App</title>
+    <title>HK EasyLife - 本地極速生活服務配對平台</title>
     <style>
-        :root {
-            --primary: #008080;
-            --primary-dark: #005c5c;
-            --accent: #ff9f1c;
-            --bg: #f4f7f6;
-            --card-bg: #ffffff;
-            --text: #2b2d42;
-            --light-text: #6c757d;
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
         }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-        body { background: var(--bg); color: var(--text); padding-bottom: 70px; line-height: 1.5; }
-
-        header {
-            background: linear-gradient(135deg, var(--primary), #004d4d);
-            color: white; padding: 1.8rem 1rem 1.2rem; text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        .container {
+            max-width: 650px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
         }
-        header h1 { font-size: 1.8rem; font-weight: 800; }
-        header p { font-size: 0.9rem; opacity: 0.9; margin-top: 0.2rem; }
-
-        .badges { display: flex; justify-content: center; gap: 0.5rem; margin-top: 0.8rem; flex-wrap: wrap; }
-        .badge { background: rgba(255,255,255,0.2); padding: 0.2rem 0.6rem; border-radius: 15px; font-size: 0.75rem; }
-
-        .container { max-width: 600px; margin: 1rem auto; padding: 0 1rem; }
-        .card { background: var(--card-bg); border-radius: 12px; padding: 1.2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 1rem; }
-
-        .service-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; margin-bottom: 1rem; }
-        .s-btn {
-            background: #f0f4f4; border: 2px solid transparent; border-radius: 8px;
-            padding: 0.6rem 0.2rem; text-align: center; cursor: pointer; font-size: 0.8rem; font-weight: bold;
+        h2 {
+            color: #1d3557;
+            text-align: center;
+            margin-bottom: 5px;
         }
-        .s-btn.active { background: #e6f2f2; border-color: var(--primary); color: var(--primary); }
-
-        .form-group { margin-bottom: 0.8rem; }
-        label { display: block; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.3rem; }
-        input, select { width: 100%; padding: 0.6rem; border: 1px solid #ccc; border-radius: 6px; font-size: 0.9rem; }
-
-        .price-box {
-            background: #eef7f7; padding: 0.8rem; border-radius: 8px;
-            display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;
+        p.subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
         }
-        .price-amount { color: var(--primary); font-size: 1.3rem; font-weight: bold; }
-
-        .btn-wa {
-            width: 100%; background: #25D366; color: white; border: none; padding: 0.8rem;
-            border-radius: 6px; font-size: 1rem; font-weight: bold; cursor: pointer; margin-top: 0.8rem;
-            display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+        .service-box {
+            background: #e8f4f8;
+            border-left: 4px solid #1d3557;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            line-height: 1.6;
         }
-
-        .bottom-nav {
-            position: fixed; bottom: 0; left: 0; right: 0; background: white;
-            display: flex; justify-content: space-around; padding: 0.6rem 0;
-            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        .service-box h3 {
+            margin-top: 0;
+            color: #1d3557;
+            font-size: 1rem;
         }
-        .nav-item { text-decoration: none; color: var(--light-text); font-size: 0.75rem; text-align: center; }
-        .nav-item.active { color: var(--primary); font-weight: bold; }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #2b2b2b;
+        }
+        input[type="text"], input[type="tel"], textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+        textarea {
+            resize: vertical;
+            height: 80px;
+        }
+        .notice-tag {
+            background: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+        .btn-submit {
+            background-color: #25D366; /* WhatsApp 綠 */
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            transition: background 0.3s;
+        }
+        .btn-submit:hover {
+            background-color: #1ebe5d;
+        }
+        .footer-links {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 0.9rem;
+        }
+        .footer-links a {
+            color: #457b9d;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>HK EasyLife 易生活</h1>
-        <p>香港首創私人陪伴與生活跑腿 Super App</p>
-        <div class="badges">
-            <span class="badge">🛡️ HKID 實名認證</span>
-            <span class="badge">🏠 安全「主人在場」規則</span>
-            <span class="badge">🔒 證件自動加水印</span>
-        </div>
-    </header>
-
     <div class="container">
-        <div class="card">
-            <h2 style="font-size:1.1rem; color:var(--primary); margin-bottom:0.8rem;">📱 預約服務</h2>
-            
-            <div class="service-grid">
-                <div class="s-btn active" onclick="setService('pet', this)">🐶 放狗/照顧</div>
-                <div class="s-btn" onclick="setService('gym', this)">🏋️ Gym Buddy</div>
-                <div class="s-btn" onclick="setService('home', this)">🔧 傢俬組裝</div>
-                <div class="s-btn" onclick="setService('errand', this)">🏃 急件跑腿</div>
+        <h2>🛡️ HK EasyLife 快速服務預約</h2>
+        <p class="subtitle">全港首創 • 實名認證 • 嚴格私隱保障</p>
+
+        <!-- 服務特色與安全聲明 -->
+        <div class="service-box">
+            <h3>📌 核心服務與安全守則：</h3>
+            <ul style="padding-left: 20px; margin: 0;">
+                <li><strong>專業項目</strong>：放狗服務、日常跑腿、傢俬組裝、健身陪練 (Gym Buddy)。</li>
+                <li><strong>🔒 健身陪練安全條例</strong>：如選擇女性 Gym Buddy，<strong>嚴格只限同性陪練</strong>，確保雙方私隱與安全；男性陪練員人才充足，更享彈性優惠收費！</li>
+                <li><strong>實名認證</strong>：所有上線夥伴均經雙證件（身分證+地址證明）防偽水印審核，安心可靠。</li>
+            </ul>
+        </div>
+
+        <form id="orderForm" onsubmit="handleOrderSubmit(event)">
+            <div class="form-group">
+                <label for="cName">您的稱呼：</label>
+                <input type="text5" id="cName" required placeholder="例如：張小姐 / 陳先生">
             </div>
 
-            <form id="bookingForm">
-                <input type="hidden" id="serviceName" value="🐶 寵物戶外放狗/照顧">
+            <div class="form-group" style="display:none;"></div> <!-- 保持排版 -->
 
-                <div id="dynamicOptions">
-                    <div class="form-group">
-                        <label>狗隻體型 (戶外交接)：</label>
-                        <select id="dogSize" onchange="calcPrice()">
-                            <option value="小型犬 (<10kg)">小型犬 (<10kg) - HK$120/小時</option>
-                            <option value="中/大型犬 (10-30kg+)">中/大型犬 (10-30kg+) - HK$160/小時</option>
-                        </select>
-                    </div>
-                </div>
+            <div class="form-group">
+                <label for="cPhone">聯絡電話 (WhatsApp)：</label>
+                <input type="tel" id="cPhone" required placeholder="例如：91234567">
+            </div>
 
-                <div class="form-group">
-                    <label>服務地區：</label>
-                    <select id="district">
-                        <option value="觀塘區">觀塘區</option>
-                        <option value="沙田區">沙田區</option>
-                        <option value="屯門區">屯門區</option>
-                        <option value="荃灣區">荃灣區</option>
-                        <option value="港島東區">港島東區</option>
-                        <option value="九龍城區">九龍城區</option>
-                    </select>
-                </div>
+            <div class="form-group">
+                <label for="cService">所需服務：</label>
+                <select id="cService">
+                    <option value="健身陪練 (Gym Buddy - 男性陪練/優惠價)">💪 健身陪練 (Gym Buddy - 男性陪練 / 優惠價)</option>
+                    <option value="健身陪練 (Gym Buddy - 女性陪練/嚴格同性)">💪 健身陪練 (Gym Buddy - 女性陪練 / 嚴格同性)</option>
+                    <option value="寵物散步 / 放狗">🐕 寵物散步 / 放狗服務</option>
+                    <option value="日常跑腿 / 排隊">🏃‍♂️ 日常跑腿 / 排隊服務</option>
+                    <option value="傢俬組裝 / 家居幫手">🛠️ 傢俬組裝 / 家居幫手</option>
+                </select>
+            </div>
 
-                <div class="form-group">
-                    <label>預約時間：</label>
-                    <input type="datetime-local" id="serviceTime" required>
-                </div>
+            <div class="notice-tag">
+                💡 <strong>提示</strong>：提交後系統將自動跳轉至 WhatsApp（97821811）與專員直接對接確認細節。
+            </div>
 
-                <div class="form-group">
-                    <label>你的 WhatsApp 電話：</label>
-                    <input type="tel" id="userPhone" placeholder="例如：91234567" required>
-                </div>
+            <div class="form-group">
+                <label for="cDetails">服務需求詳情（地區、時間、具體要求）：</label>
+                <textarea id="cDetails" required placeholder="例如：九龍灣 24/7 Fitness，希望搵男教練幫手睇位，本週二下午 2 點..."></textarea>
+            </div>
 
-                <div class="price-box">
-                    <span>預估費用：</span>
-                    <span class="price-amount" id="priceTag">HK$ 120</span>
-                </div>
+            <button type="submit" class="btn-submit">💬 透過 WhatsApp 確認預約</button>
+        </form>
 
-                <button type="button" class="btn-wa" onclick="submitToWA()">
-                    💬 一鍵發送至 WhatsApp 預約
-                </button>
-            </form>
+        <div class="footer-links">
+            <p>如果你想加入成為合作夥伴？<a href="partner.html" target="_blank">👉 點此前往夥伴認證中心</a></p>
         </div>
     </div>
 
-    <nav class="bottom-nav">
-        <a href="index.html" class="nav-item active">🏠 首頁預約</a>
-        <a href="partner.html" class="nav-item">🤝 成為夥伴/實名招募</a>
-    </nav>
-
     <script>
-        function setService(type, elem) {
-            document.querySelectorAll('.s-btn').forEach(b => b.classList.remove('active'));
-            elem.classList.add('active');
+        function handleOrderSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('cName').value;
+            const phone = document.getElementById('cPhone').value;
+            const service = document.getElementById('cService').value;
+            const details = document.getElementById('cDetails').value;
 
-            const opt = document.getElementById('dynamicOptions');
-            const sName = document.getElementById('serviceName');
+            const text = `您好！我想預約 HK EasyLife 服務：%0A` +
+                         `• 服務項目：${service}%0A` +
+                         `• 客戶稱呼：${name}%0A` +
+                         `• 聯絡電話：${phone}%0A` +
+                         `• 需求詳情：${details}`;
 
-            if(type === 'pet') {
-                sName.value = '🐶 寵物戶外放狗/照顧';
-                opt.innerHTML = `<div class="form-group"><label>狗隻體型：</label><select id="dogSize" onchange="calcPrice()"><option value="小型犬 (<10kg)">小型犬 - HK$120/小時</option><option value="中/大型犬">中/大型犬 - HK$160/小時</option></select></div>`;
-            } else if(type === 'gym') {
-                sName.value = '🏋️ Gym Buddy 運動陪伴';
-                opt.innerHTML = `<div class="form-group"><label>陪伴風格：</label><select><option>精神支柱型 (互相鼓勵)</option><option>自主訓練型 (幫手補重量)</option></select></div>`;
-            } else if(type === 'home') {
-                sName.value = '🔧 IKEA/淘寶傢俬組裝 (主人需喺現場)';
-                opt.innerHTML = `<div class="form-group" style="color:red; font-size:0.75rem;">⚠️ 提示：為保障雙方安全，上門服務主人必須全程喺現場。</div>`;
-            } else {
-                sName.value = '🏃 同區急件/代排隊';
-                opt.innerHTML = `<div class="form-group"><label>任務細節：</label><input type="text" placeholder="例如：購買指定商品/急件送遞"></div>`;
-            }
-            calcPrice();
-        }
-
-        function calcPrice() {
-            const name = document.getElementById('serviceName').value;
-            let price = 100;
-            if(name.includes('寵物')) {
-                const size = document.getElementById('dogSize') ? document.getElementById('dogSize').value : '';
-                price = size.includes('中/大型') ? 160 : 120;
-            } else if(name.includes('Gym')) {
-                price = 150;
-            } else if(name.includes('傢俬')) {
-                price = 180;
-            }
-            document.getElementById('priceTag').innerText = `HK$ ${price}`;
-        }
-
-        function submitToWA() {
-            const s = document.getElementById('serviceName').value;
-            const d = document.getElementById('district').value;
-            const t = document.getElementById('serviceTime').value;
-            const p = document.getElementById('userPhone').value;
-            const price = document.getElementById('priceTag').innerText;
-
-            if(!p || !t) { alert('請填寫預約時間同電話！'); return; }
-
-            const text = `你好！我想預約 HK EasyLife 服務：%0A` +
-                         `• 項目：${s}%0A` +
-                         `• 地區：${d}%0A` +
-                         `• 時間：${t}%0A` +
-                         `• 預估費用：${price}%0A` +
-                         `• 電話：${p}`;
-
+            // 跳轉到商用 WhatsApp (97821811)
             window.open(`https://wa.me/85297821811?text=${text}`, '_blank');
         }
     </script>
