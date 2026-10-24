@@ -20,18 +20,26 @@
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
         }
-        h2 {
-            color: #1d3557;
+        .logo-header {
             text-align: center;
-            margin-bottom: 5px;
+            margin-bottom: 15px;
         }
-        p.subtitle {
-            text-align: center;
-            color: #666;
-            font-size: 0.95rem;
-            margin-bottom: 25px;
+        .logo-badge {
+            display: inline-block;
+            background: #1d3557;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
-        .service-box, .faq-box {
+        h2 { color: #1d3557; text-align: center; margin-bottom: 5px; }
+        p.subtitle { text-align: center; color: #666; font-size: 0.95rem; margin-bottom: 20px; }
+        .top-nav { text-align: center; margin-bottom: 25px; padding-bottom: 12px; border-bottom: 1px solid #eee; }
+        .top-nav a { color: #457b9d; text-decoration: none; font-weight: bold; margin: 0 10px; font-size: 0.9rem; }
+        .top-nav a:hover { text-decoration: underline; }
+        .service-box {
             background: #e8f4f8;
             border-left: 4px solid #1d3557;
             padding: 15px;
@@ -40,105 +48,51 @@
             font-size: 0.9rem;
             line-height: 1.6;
         }
-        .faq-box {
-            background: #f1faee;
-            border-left-color: #2a9d8f;
-        }
-        .service-box h3, .faq-box h3 {
-            margin-top: 0;
-            color: #1d3557;
-            font-size: 1rem;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: #2b2b2b;
-        }
+        .service-box h3 { margin-top: 0; color: #1d3557; font-size: 1rem; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-weight: bold; color: #2b2b2b; }
         input[type="text"], input[type="tel"], textarea, select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            box-sizing: border-box;
-            font-size: 1rem;
+            width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; font-size: 1rem;
         }
-        textarea {
-            resize: vertical;
-            height: 80px;
-        }
+        textarea { resize: vertical; height: 80px; }
         .notice-tag {
-            background: #fff3cd;
-            border: 1px solid #ffeeba;
-            color: #856404;
-            padding: 10px;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            margin-bottom: 15px;
+            background: #fff3cd; border: 1px solid #ffeeba; color: #856404; padding: 10px; border-radius: 6px; font-size: 0.85rem; margin-bottom: 15px;
         }
         .btn-submit {
-            background-color: #25D366; /* WhatsApp 綠 */
-            color: white;
-            border: none;
-            width: 100%;
-            padding: 14px;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            transition: background 0.3s;
+            background-color: #25D366; color: white; border: none; width: 100%; padding: 14px; border-radius: 8px; font-size: 1.1rem; font-weight: bold; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
-        .btn-submit:hover {
-            background-color: #1ebe5d;
-        }
-        .footer-links {
-            text-align: center;
-            margin-top: 25px;
-            font-size: 0.9rem;
-        }
-        .footer-links a {
-            color: #457b9d;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
+        .btn-submit:hover { background-color: #1ebe5d; }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h2>🛡️ HK EasyLife 快速服務預約</h2>
-        <p class="subtitle">全港首創 • 實名認證 • 純中介高效配對</p>
+        <!-- 品牌 Logo 徽章 -->
+        <div class="logo-header">
+            <div class="logo-badge">🛡️ HK EasyLife</div>
+        </div>
 
-        <!-- 服務特色與參考價目 -->
+        <h2>快速服務預約</h2>
+        <p class="subtitle">全港首創 • 實名審核 • 強度精準匹配</p>
+
+        <!-- 導航列 -->
+        <div class="top-nav">
+            <a href="index.html">🏠 客戶預約首頁</a> | 
+            <a href="partner.html">🤝 夥伴認證中心</a> | 
+            <a href="faq.html">❓ 常見問題 (FAQ)</a>
+        </div>
+
+        <!-- 服務特色與明碼實價 -->
         <div class="service-box">
             <h3>📌 服務項目與明碼實價：</h3>
             <ul style="padding-left: 20px; margin: 0 0 10px 0;">
-                <li>💪 <strong>健身陪練 (男性優惠價)</strong>：$120 / 小時（人才充足，性價比高）</li>
-                <li>💪 <strong>健身陪練 (女性專屬陪練)</strong>：$150 / 小時（<strong>嚴格只限同性陪練</strong>，私隱安心）</li>
-                <li>🐕 <strong>寵物散步 / 放狗</strong>：$100 / 小時</li>
-                <li>🏃‍♂️ <strong>日常跑腿 / 排隊</strong>：$80 起（視乎距離與工作量）</li>
+                <li>💪 <strong>力量型健身陪練 (標準指導)</strong>：$120 / 小時（強力突破、重量保護與訓練夥伴）</li>
+                <li>💪 <strong>專屬貼心健身陪練 (女士專用)</strong>：$150 / 小時（<strong>嚴格遵循同性陪練原則</strong>，私隱安心）</li>
+                <li>🐕 <strong>寵物散步 / 放狗專員</strong>：$100 / 小時（細心照顧，定時回報）</li>
+                <li>🏃‍♂️ <strong>日常跑腿 / 排隊代辦</strong>：$80 起（高效快捷，省時省心）</li>
                 <li>🛠️ <strong>傢俬組裝 / 家居幫手</strong>：按複雜度實報實銷</li>
             </ul>
-            <p style="margin: 0; font-size: 0.85rem; color: #555;">🔒 <strong>安全承諾</strong>：平台僅作第三方配對，所有合作夥伴均經雙證件防偽水印實名認證[cite: 1, 2]。</p>
-        </div>
-
-        <!-- Q&A 常見問題解答區 -->
-        <div class="faq-box">
-            <h3>❓ 常見問題 (Q&A)：</h3>
-            <p><strong>Q1：EasyLife 平台有咩作用？</strong><br>
-            A：我們專注做「配對與審核」，幫您快速尋找合資格嘅本地幫手（Gym Buddy、放狗員、跑腿），省卻您大海撈針的時間。</p>
-            <p><strong>Q2：健身陪練有咩安全限制？</strong><br>
-            A：為保障雙方私隱，女性健身陪練嚴格執行「同性陪練」原則；男性陪練員基數較大，更享彈性優惠價。</p>
-            <p style="margin-bottom: 0;"><strong>Q3：預約後點樣付款？</strong><br>
-            A：提交表單後會直跳 WhatsApp 與專員對接，確認細節後透過轉數快（FPS）或 PayMe 直接付費給實名拍檔。</p>
+            <p style="margin: 0; font-size: 0.85rem; color: #555;">🔒 <strong>強度匹配機制</strong>：為免浪費彼此時間，所有健身預約需簡單提供訓練經驗或狀態參考，確保實力對等、節奏一致。</p>
         </div>
 
         <form id="orderForm" onsubmit="handleOrderSubmit(event)">
@@ -155,8 +109,8 @@
             <div class="form-group">
                 <label for="cService">選擇預約服務：</label>
                 <select id="cService">
-                    <option value="健身陪練 - 男性陪練 ($120/hr)">💪 健身陪練 - 男性陪練 ($120/hr)</option>
-                    <option value="健身陪練 - 女性陪練/嚴格同性 ($150/hr)">💪 健身陪練 - 女性陪練 / 嚴格同性 ($150/hr)</option>
+                    <option value="力量型健身陪練 ($120/hr)">💪 力量型健身陪練 ($120/hr)</option>
+                    <option value="專屬貼心健身陪練/同性 ($150/hr)">💪 專屬貼心健身陪練 - 女士專用/同性 ($150/hr)</option>
                     <option value="寵物散步/放狗 ($100/hr)">🐕 寵物散步 / 放狗 ($100/hr)</option>
                     <option value="日常跑腿/排隊 ($80起)">🏃‍♂️ 日常跑腿 / 排隊 ($80起)</option>
                     <option value="傢俬組裝/家居幫手">🛠️ 傢俬組裝 / 家居幫手</option>
@@ -164,20 +118,16 @@
             </div>
 
             <div class="notice-tag">
-                💡 <strong>提示</strong>：提交後系統將自動跳轉至 WhatsApp（97821811）與專員直接對接確認細節。
+                💡 <strong>提示</strong>：提交後系統將自動跳轉至 WhatsApp（97821811）發送需求，專員會協助您與合適夥伴對接。
             </div>
 
             <div class="form-group">
-                <label for="cDetails">服務需求詳情（地區、時間、具體要求）：</label>
-                <textarea id="cDetails" required placeholder="例如：九龍灣 24/7 Fitness，希望搵男教練幫手睇位，本週二下午 2 點..."></textarea>
+                <label for="cDetails">需求詳情（常去健身房、訓練目標／現時重量）：</label>
+                <textarea id="cDetails" required placeholder="例如：觀塘 24/7 Fitness，胸推目標 80kg，想搵巴打幫手睇位，星期二下午..."></textarea>
             </div>
 
             <button type="submit" class="btn-submit">💬 透過 WhatsApp 確認預約</button>
         </form>
-
-        <div class="footer-links">
-            <p>如果你想加入成為合作夥伴？<a href="partner.html" target="_blank">👉 點此前往夥伴認證中心</a></p>
-        </div>
     </div>
 
     <script>
@@ -194,7 +144,6 @@
                          `• 聯絡電話：${phone}%0A` +
                          `• 需求詳情：${details}`;
 
-            // 跳轉到商用 WhatsApp (97821811)
             window.open(`https://wa.me/85297821811?text=${text}`, '_blank');
         }
     </script>

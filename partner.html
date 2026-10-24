@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HK EasyLife - 合作夥伴實名認證中心</title>
+    <title>HK EasyLife - 合作夥伴認證中心</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: #f4f7f6;
             margin: 0;
             padding: 20px;
@@ -20,246 +20,107 @@
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
         }
-        h2 {
-            color: #1d3557;
+        .logo-header {
             text-align: center;
-            margin-bottom: 5px;
+            margin-bottom: 15px;
         }
-        p.subtitle {
-            text-align: center;
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 25px;
-        }
-        .guide-box {
-            background: #e8f4f8;
-            border-left: 4px solid #008080;
-            padding: 15px;
-            border-radius: 4px;
-            margin-bottom: 25px;
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-        .guide-box h3 {
-            margin-top: 0;
-            color: #006666;
-            font-size: 1rem;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        label {
-            display: block;
-            margin-bottom: 8px;
+        .logo-badge {
+            display: inline-block;
+            background: #1d3557;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 50px;
             font-weight: bold;
-            color: #2b2b2b;
-        }
-        input[type="text"], input[type="tel"], textarea, select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            box-sizing: border-box;
-            font-size: 1rem;
-        }
-        textarea {
-            resize: vertical;
-            height: 80px;
-        }
-        .watermark-box {
-            background: #f8f9fa;
-            border: 2px dashed #008080;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-        canvas {
-            max-width: 100%;
-            height: auto;
-            margin-top: 10px;
-            border-radius: 4px;
-            display: none;
-        }
-        .btn-watermark {
-            background-color: #457b9d;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            margin-top: 8px;
-        }
-        .btn-watermark:hover {
-            background-color: #1d3557;
-        }
-        .btn-submit {
-            background-color: #25D366; /* WhatsApp 綠 */
-            color: white;
-            border: none;
-            width: 100%;
-            padding: 14px;
-            border-radius: 8px;
             font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 20px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            transition: background 0.3s;
         }
-        .btn-submit:hover {
-            background-color: #1ebe5d;
-        }
-        .notice {
-            font-size: 0.85rem;
-            color: #d90429;
-            margin-top: 5px;
-        }
+        h2 { color: #1d3557; text-align: center; }
+        p.subtitle { text-align: center; color: #666; font-size: 0.9rem; margin-bottom: 20px; }
+        .top-nav { text-align: center; margin-bottom: 25px; padding-bottom: 12px; border-bottom: 1px solid #eee; }
+        .top-nav a { color: #457b9d; text-decoration: none; font-weight: bold; margin: 0 10px; font-size: 0.9rem; }
+        .top-nav a:hover { text-decoration: underline; }
+        .form-group { margin-bottom: 18px; }
+        label { display: block; margin-bottom: 6px; font-weight: bold; font-size: 0.95rem; }
+        input, select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; }
+        .notice-box { background: #e8f4f8; padding: 12px; border-left: 4px solid #1d3557; font-size: 0.85rem; margin-bottom: 15px; border-radius: 4px; }
+        .btn-submit { background-color: #1d3557; color: white; border: none; width: 100%; padding: 14px; border-radius: 8px; font-size: 1rem; font-weight: bold; cursor: pointer; margin-top: 10px; }
+        .btn-submit:hover { background-color: #112240; }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h2>🛡️ HK EasyLife 合作夥伴認證中心</h2>
-        <p class="subtitle">保障私隱：身分證及地址證明自助加水印工具</p>
+        <!-- 品牌 Logo 徽章 -->
+        <div class="logo-header">
+            <div class="logo-badge">🛡️ HK EasyLife</div>
+        </div>
 
-        <!-- 夥伴專用教學區 -->
-        <div class="guide-box">
-            <h3>📖 證件加水印教學（三步曲）：</h3>
-            <ol style="padding-left: 20px; margin-bottom: 0;">
-                <li><strong>上載檔案</strong>：分別選取你的「香港身分證」及「近期地址證明」相片。</li>
-                <li><strong>自動加印</strong>：系統會即時為文件加上紅色半透明水印（僅供 HK EasyLife 認證使用）。</li>
-                <li><strong>下載保存</strong>：點擊「下載」按鈕將打好水印的檔案儲存到手機或電腦，等待後續獲邀時再透過 WhatsApp 提交。</li>
-            </ol>
+        <h2>夥伴認證中心</h2>
+        <p class="subtitle">實名審核 • 精準調度 • 安全保障</p>
+
+        <!-- 導航列 -->
+        <div class="top-nav">
+            <a href="index.html">🏠 客戶預約首頁</a> | 
+            <a href="partner.html">🤝 夥伴認證中心</a> | 
+            <a href="faq.html">❓ 常見問題 (FAQ)</a>
+        </div>
+
+        <div class="notice-box">
+            📌 <strong>夥伴招募須知</strong>：為確保配對質素，請填寫您的常駐區域、健身房權限，並上傳證件防水印及運動狀態照，方便平台為您精準分派高質量訂單！
         </div>
 
         <form id="partnerForm" onsubmit="handlePartnerSubmit(event)">
             <div class="form-group">
-                <label for="pName">真實姓名：</label>
-                <input type="text" id="pName" required placeholder="請輸入全名">
+                <label>真實姓名 / 稱呼：</label>
+                <input type="text" id="pName" required placeholder="例如：陳先生 / David">
             </div>
 
             <div class="form-group">
-                <label for="pPhone">WhatsApp 電話號碼：</label>
+                <label>聯絡電話 (WhatsApp)：</label>
                 <input type="tel" id="pPhone" required placeholder="例如：91234567">
             </div>
 
             <div class="form-group">
-                <label for="pRole">申請服務類型：</label>
-                <select id="pRole">
-                    <option value="放狗服務">放狗服務</option>
-                    <option value="Gym Buddy">Gym Buddy</option>
-                    <option value="日常跑腿">日常跑腿</option>
-                    <option value="傢俬組裝">傢俬組裝</option>
-                </select>
+                <label>常駐區域（例如：觀塘、荃灣、旺角）：</label>
+                <input type="text" id="pArea" required placeholder="例如：觀塘 / 九龍東">
             </div>
 
             <div class="form-group">
-                <label for="pExp">相關經驗 / 背景：</label>
-                <textarea id="pExp" placeholder="簡述相關工作經驗..."></textarea>
+                <label>可出入之健身房／會籍權限：</label>
+                <input type="text" id="pGym" placeholder="例如：24/7 Fitness 全線, Anytime Fitness, 康文署等">
             </div>
 
-            <!-- 1. 香港身分證打水印區 -->
             <div class="form-group">
-                <label>1. 香港身分證 (HKID) 副本：</label>
-                <div class="watermark-box">
-                    <input type="file" id="hkidInput" accept="image/*" onchange="processImage(event, 'hkidCanvas', 'HKID')">
-                    <p class="notice">🔒 系統將自動加上「僅供 HK EasyLife 認證使用」水印</p>
-                    <canvas id="hkidCanvas"></canvas>
-                    <button type="button" id="btnHkidDownload" class="btn-watermark" style="display:none;" onclick="downloadImage('hkidCanvas', 'HK_EasyLife_HKID.jpg')">📥 下載已打水印的身分證</button>
-                </div>
+                <label>上載證件防偽水印 (HKID / 地址證明)：</label>
+                <input type="file" id="pDoc" accept="image/*" required>
+                <small style="color: #666; font-size: 0.8rem;">*系統將自動加上「For EasyLife Verification Only」防偽水印以保障私隱[cite: 1, 2]。</small>
             </div>
 
-            <!-- 2. 地址證明打水印區 -->
             <div class="form-group">
-                <label>2. 近期地址證明 (水/電/煤/銀行月結單)：</label>
-                <div class="watermark-box">
-                    <input type="file" id="addressInput" accept="image/*" onchange="processImage(event, 'addressCanvas', 'Address')">
-                    <p class="notice">🔒 系統將自動加上「僅供 HK EasyLife 認證使用」水印</p>
-                    <canvas id="addressCanvas"></canvas>
-                    <button type="button" id="btnAddressDownload" class="btn-watermark" style="display:none;" onclick="downloadImage('addressCanvas', 'HK_EasyLife_Address.jpg')">📥 下載已打水印的地址證明</button>
-                </div>
+                <label>上載近期健身運動照 / 狀態參考（供配對審核）：</label>
+                <input type="file" id="pPhoto" accept="image/*" required>
+                <small style="color: #666; font-size: 0.8rem;">*讓客仔知道您的訓練水平，提升配對成功率。</small>
             </div>
 
-            <button type="submit" class="btn-submit">💬 提交基本資料並開始 WhatsApp 交流</button>
+            <button type="submit" class="btn-submit">🚀 提交審核資料並對接 WhatsApp</button>
         </form>
     </div>
 
     <script>
-        // 通用加水印函數
-        function processImage(event, canvasId, type) {
-            const file = event.target.files[0];
-            if (!file) return;
-
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                const img = new Image();
-                img.onload = function() {
-                    const canvas = document.getElementById(canvasId);
-                    const ctx = canvas.getContext('2d');
-
-                    canvas.width = img.width;
-                    canvas.height = img.height;
-
-                    // 畫出原圖
-                    ctx.drawImage(img, 0, 0);
-
-                    // 設定浮水印樣式
-                    ctx.font = `bold ${Math.max(img.width / 20, 24)}px sans-serif`;
-                    ctx.fillStyle = 'rgba(255, 0, 0, 0.4)'; // 半透明紅色
-                    ctx.textAlign = 'center';
-                    ctx.textBaseline = 'middle';
-
-                    // 加上對角線水印
-                    ctx.save();
-                    ctx.translate(canvas.width / 2, canvas.height / 2);
-                    ctx.rotate(-Math.PI / 6); // 旋轉 30 度
-                    ctx.fillText("僅供 HK EasyLife 認證使用", 0, 0);
-                    ctx.restore();
-
-                    canvas.style.display = 'block';
-                    
-                    // 顯示對應的下載按鈕
-                    if (type === 'HKID') {
-                        document.getElementById('btnHkidDownload').style.display = 'inline-block';
-                    } else {
-                        document.getElementById('btnAddressDownload').style.display = 'inline-block';
-                    }
-                }
-                img.src = e.target.result;
-            }
-            reader.readAsDataURL(file);
-        }
-
-        // 單獨下載按鈕
-        function downloadImage(canvasId, filename) {
-            const canvas = document.getElementById(canvasId);
-            const imageURL = canvas.toDataURL('image/jpeg', 0.9);
-            const downloadLink = document.createElement('a');
-            downloadLink.href = imageURL;
-            downloadLink.download = filename;
-            document.body.appendChild(downloadLink);
-            downloadLink.click();
-            document.body.removeChild(downloadLink);
-        }
-
-        // 提交表單：純文字先去 WhatsApp
         function handlePartnerSubmit(e) {
             e.preventDefault();
             const name = document.getElementById('pName').value;
             const phone = document.getElementById('pPhone').value;
-            const role = document.getElementById('pRole').value;
-            const exp = document.getElementById('pExp').value;
+            const area = document.getElementById('pArea').value;
+            const gym = document.getElementById('pGym').value;
 
-            const text = `你好！我想申請成為 HK EasyLife 夥伴：%0A` +
-                         `• 服務類別：${role}%0A` +
+            const text = `您好！我想申請成為 HK EasyLife 合作夥伴：%0A` +
                          `• 姓名：${name}%0A` +
                          `• 電話：${phone}%0A` +
-                         `• 經驗：${exp}%0A%0A` +
-                         `(已明白認證流程，準備進行文字交流)`;
+                         `• 常駐區：${area}%0A` +
+                         `• 健身房權限：${gym}%0A` +
+                         `*(註：證件及狀態照已準備好，請指示後續交收)*`;
 
-            // 跳轉 WhatsApp (97821811)
             window.open(`https://wa.me/85297821811?text=${text}`, '_blank');
         }
     </script>
