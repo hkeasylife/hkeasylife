@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HK EasyLife - 本地極速生活服務配對平台</title>
+    <title>HK EasyLife - 本地極速生活與情緒陪伴配對平台</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -73,7 +73,7 @@
         </div>
 
         <h2>快速服務預約</h2>
-        <p class="subtitle">全港首創 • 實名審核 • 強度精準匹配</p>
+        <p class="subtitle">全港首創 • 實名審核 • 專業陪伴與生活支援</p>
 
         <!-- 導航列 -->
         <div class="top-nav">
@@ -84,15 +84,16 @@
 
         <!-- 服務特色與明碼實價 -->
         <div class="service-box">
-            <h3>📌 服務項目與明碼實價：</h3>
+            <h3>📌 熱門服務項目與明碼實價：</h3>
             <ul style="padding-left: 20px; margin: 0 0 10px 0;">
-                <li>💪 <strong>力量型健身陪練 (標準指導)</strong>：$120 / 小時（強力突破、重量保護與訓練夥伴）</li>
-                <li>💪 <strong>專屬貼心健身陪練 (女士專用)</strong>：$150 / 小時（<strong>嚴格遵循同性陪練原則</strong>，私隱安心）</li>
-                <li>🐕 <strong>寵物散步 / 放狗專員</strong>：$100 / 小時（細心照顧，定時回報）</li>
-                <li>🏃‍♂️ <strong>日常跑腿 / 排隊代辦</strong>：$80 起（高效快捷，省時省心）</li>
-                <li>🛠️ <strong>傢俬組裝 / 家居幫手</strong>：按複雜度實報實銷</li>
+                <li>💪 <strong>力量型健身陪練 (標準指導)</strong>：$120 / 小時（強力突破、重量保護）</li>
+                <li>💪 <strong>專屬貼心健身陪練 (女士專用)</strong>：$150 / 小時（<strong>嚴格遵循同性陪練原則</strong>）</li>
+                <li>🎮 <strong>遊戲開黑 / 娛樂打機夥伴</strong>：$100 / 小時（Switch / 手遊雙打、開心開麥）</li>
+                <li>🎬 <strong>休閒陪伴（陪睇戲 / 行街 / 影相）</strong>：$120 / 小時（告別孤單，優質社交陪伴）</li>
+                <li>☕ <strong>心事樹窿 / 輕鬆傾偈散心</strong>：$100 / 小時（陽光健康、純粹陪伴與傾訴支援）</li>
+                <li>🐕 <strong>戶外放狗 / 節日代拜山 / 跑腿</strong>：$100 / 小時起（高效快捷、省時省心）[cite: 6]</li>
             </ul>
-            <p style="margin: 0; font-size: 0.85rem; color: #555;">🔒 <strong>強度匹配機制</strong>：為免浪費彼此時間，所有健身預約需簡單提供訓練經驗或狀態參考，確保實力對等、節奏一致。</p>
+            <p style="margin: 0; font-size: 0.85rem; color: #555;">🔒 <strong>安全承諾</strong>：所有合作夥伴均經雙證件防偽水印實名認證[cite: 1, 2]，陪伴服務嚴格規範於公開、安全場所進行。</p>
         </div>
 
         <form id="orderForm" onsubmit="handleOrderSubmit(event)">
@@ -111,9 +112,10 @@
                 <select id="cService">
                     <option value="力量型健身陪練 ($120/hr)">💪 力量型健身陪練 ($120/hr)</option>
                     <option value="專屬貼心健身陪練/同性 ($150/hr)">💪 專屬貼心健身陪練 - 女士專用/同性 ($150/hr)</option>
-                    <option value="寵物散步/放狗 ($100/hr)">🐕 寵物散步 / 放狗 ($100/hr)</option>
-                    <option value="日常跑腿/排隊 ($80起)">🏃‍♂️ 日常跑腿 / 排隊 ($80起)</option>
-                    <option value="傢俬組裝/家居幫手">🛠️ 傢俬組裝 / 家居幫手</option>
+                    <option value="遊戲開黑/娛樂打機夥伴 ($100/hr)">🎮 遊戲開黑 / 娛樂打機夥伴 ($100/hr)</option>
+                    <option value="休閒陪伴-陪睇戲/行街/影相 ($120/hr)">🎬 休閒陪伴 - 陪睇戲 / 行街 / 影相 ($120/hr)</option>
+                    <option value="心事樹窿/輕鬆傾偈散心 ($100/hr)">☕ 心事樹窿 / 輕鬆傾偈散心 ($100/hr)</option>
+                    <option value="戶外放狗/代拜山/日常跑腿 ($100起)">🐕 戶外放狗 / 代拜山 / 日常跑腿 ($100起)</option>
                 </select>
             </div>
 
@@ -122,8 +124,8 @@
             </div>
 
             <div class="form-group">
-                <label for="cDetails">需求詳情（常去健身房、訓練目標／現時重量）：</label>
-                <textarea id="cDetails" required placeholder="例如：觀塘 24/7 Fitness，胸推目標 80kg，想搵巴打幫手睇位，星期二下午..."></textarea>
+                <label for="cDetails">需求詳情（時間、地點、具體要求）：</label>
+                <textarea id="cDetails" required placeholder="例如：本週五晚想搵個拍檔一齊去銅鑼灣睇戲，或者一齊打 Switch..."></textarea>
             </div>
 
             <button type="submit" class="btn-submit">💬 透過 WhatsApp 確認預約</button>
