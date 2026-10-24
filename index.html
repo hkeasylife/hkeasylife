@@ -31,7 +31,7 @@
             font-size: 0.95rem;
             margin-bottom: 25px;
         }
-        .service-box {
+        .service-box, .faq-box {
             background: #e8f4f8;
             border-left: 4px solid #1d3557;
             padding: 15px;
@@ -40,7 +40,11 @@
             font-size: 0.9rem;
             line-height: 1.6;
         }
-        .service-box h3 {
+        .faq-box {
+            background: #f1faee;
+            border-left-color: #2a9d8f;
+        }
+        .service-box h3, .faq-box h3 {
             margin-top: 0;
             color: #1d3557;
             font-size: 1rem;
@@ -111,25 +115,37 @@
 
     <div class="container">
         <h2>🛡️ HK EasyLife 快速服務預約</h2>
-        <p class="subtitle">全港首創 • 實名認證 • 嚴格私隱保障</p>
+        <p class="subtitle">全港首創 • 實名認證 • 純中介高效配對</p>
 
-        <!-- 服務特色與安全聲明 -->
+        <!-- 服務特色與參考價目 -->
         <div class="service-box">
-            <h3>📌 核心服務與安全守則：</h3>
-            <ul style="padding-left: 20px; margin: 0;">
-                <li><strong>專業項目</strong>：放狗服務、日常跑腿、傢俬組裝、健身陪練 (Gym Buddy)。</li>
-                <li><strong>🔒 健身陪練安全條例</strong>：如選擇女性 Gym Buddy，<strong>嚴格只限同性陪練</strong>，確保雙方私隱與安全；男性陪練員人才充足，更享彈性優惠收費！</li>
-                <li><strong>實名認證</strong>：所有上線夥伴均經雙證件（身分證+地址證明）防偽水印審核，安心可靠。</li>
+            <h3>📌 服務項目與明碼實價：</h3>
+            <ul style="padding-left: 20px; margin: 0 0 10px 0;">
+                <li>💪 <strong>健身陪練 (男性優惠價)</strong>：$120 / 小時（人才充足，性價比高）</li>
+                <li>💪 <strong>健身陪練 (女性專屬陪練)</strong>：$150 / 小時（<strong>嚴格只限同性陪練</strong>，私隱安心）</li>
+                <li>🐕 <strong>寵物散步 / 放狗</strong>：$100 / 小時</li>
+                <li>🏃‍♂️ <strong>日常跑腿 / 排隊</strong>：$80 起（視乎距離與工作量）</li>
+                <li>🛠️ <strong>傢俬組裝 / 家居幫手</strong>：按複雜度實報實銷</li>
             </ul>
+            <p style="margin: 0; font-size: 0.85rem; color: #555;">🔒 <strong>安全承諾</strong>：平台僅作第三方配對，所有合作夥伴均經雙證件防偽水印實名認證[cite: 1, 2]。</p>
+        </div>
+
+        <!-- Q&A 常見問題解答區 -->
+        <div class="faq-box">
+            <h3>❓ 常見問題 (Q&A)：</h3>
+            <p><strong>Q1：EasyLife 平台有咩作用？</strong><br>
+            A：我們專注做「配對與審核」，幫您快速尋找合資格嘅本地幫手（Gym Buddy、放狗員、跑腿），省卻您大海撈針的時間。</p>
+            <p><strong>Q2：健身陪練有咩安全限制？</strong><br>
+            A：為保障雙方私隱，女性健身陪練嚴格執行「同性陪練」原則；男性陪練員基數較大，更享彈性優惠價。</p>
+            <p style="margin-bottom: 0;"><strong>Q3：預約後點樣付款？</strong><br>
+            A：提交表單後會直跳 WhatsApp 與專員對接，確認細節後透過轉數快（FPS）或 PayMe 直接付費給實名拍檔。</p>
         </div>
 
         <form id="orderForm" onsubmit="handleOrderSubmit(event)">
             <div class="form-group">
                 <label for="cName">您的稱呼：</label>
-                <input type="text5" id="cName" required placeholder="例如：張小姐 / 陳先生">
+                <input type="text" id="cName" required placeholder="例如：張小姐 / 陳先生">
             </div>
-
-            <div class="form-group" style="display:none;"></div> <!-- 保持排版 -->
 
             <div class="form-group">
                 <label for="cPhone">聯絡電話 (WhatsApp)：</label>
@@ -137,13 +153,13 @@
             </div>
 
             <div class="form-group">
-                <label for="cService">所需服務：</label>
+                <label for="cService">選擇預約服務：</label>
                 <select id="cService">
-                    <option value="健身陪練 (Gym Buddy - 男性陪練/優惠價)">💪 健身陪練 (Gym Buddy - 男性陪練 / 優惠價)</option>
-                    <option value="健身陪練 (Gym Buddy - 女性陪練/嚴格同性)">💪 健身陪練 (Gym Buddy - 女性陪練 / 嚴格同性)</option>
-                    <option value="寵物散步 / 放狗">🐕 寵物散步 / 放狗服務</option>
-                    <option value="日常跑腿 / 排隊">🏃‍♂️ 日常跑腿 / 排隊服務</option>
-                    <option value="傢俬組裝 / 家居幫手">🛠️ 傢俬組裝 / 家居幫手</option>
+                    <option value="健身陪練 - 男性陪練 ($120/hr)">💪 健身陪練 - 男性陪練 ($120/hr)</option>
+                    <option value="健身陪練 - 女性陪練/嚴格同性 ($150/hr)">💪 健身陪練 - 女性陪練 / 嚴格同性 ($150/hr)</option>
+                    <option value="寵物散步/放狗 ($100/hr)">🐕 寵物散步 / 放狗 ($100/hr)</option>
+                    <option value="日常跑腿/排隊 ($80起)">🏃‍♂️ 日常跑腿 / 排隊 ($80起)</option>
+                    <option value="傢俬組裝/家居幫手">🛠️ 傢俬組裝 / 家居幫手</option>
                 </select>
             </div>
 
@@ -173,7 +189,7 @@
             const details = document.getElementById('cDetails').value;
 
             const text = `您好！我想預約 HK EasyLife 服務：%0A` +
-                         `• 服務項目：${service}%0A` +
+                         `• 預約項目：${service}%0A` +
                          `• 客戶稱呼：${name}%0A` +
                          `• 聯絡電話：${phone}%0A` +
                          `• 需求詳情：${details}`;
